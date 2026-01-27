@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_5793fbafcc58e7b07173dbdd6d2dc8e5 {
+                #map_dab810638aaf6a1e6eb51bab01734318 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,6 +89,9 @@ async function sendFeedback(pid){
     await fetch(GOOGLE_ENDPOINT, {
       method: "POST",
       mode: "no-cors",
+      headers: {
+      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
       body: form.toString()
     });
 
@@ -102,14 +105,14 @@ async function sendFeedback(pid){
 }
 </script>
     
-            <div class="folium-map" id="map_5793fbafcc58e7b07173dbdd6d2dc8e5" ></div>
+            <div class="folium-map" id="map_dab810638aaf6a1e6eb51bab01734318" ></div>
         
 </body>
 <script>
     
     
-            var map_5793fbafcc58e7b07173dbdd6d2dc8e5 = L.map(
-                "map_5793fbafcc58e7b07173dbdd6d2dc8e5",
+            var map_dab810638aaf6a1e6eb51bab01734318 = L.map(
+                "map_dab810638aaf6a1e6eb51bab01734318",
                 {
                     center: [24.91440298304585, 121.2158821825875],
                     crs: L.CRS.EPSG3857,
@@ -121,13 +124,13 @@ async function sendFeedback(pid){
 
                 }
             );
-            L.control.scale().addTo(map_5793fbafcc58e7b07173dbdd6d2dc8e5);
+            L.control.scale().addTo(map_dab810638aaf6a1e6eb51bab01734318);
 
             
 
         
     
-            var tile_layer_7fcc56e9d36338a704720259c78bb19e = L.tileLayer(
+            var tile_layer_82c33e992016a6bd8b0c904e64d88c37 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -144,23 +147,23 @@ async function sendFeedback(pid){
             );
         
     
-            tile_layer_7fcc56e9d36338a704720259c78bb19e.addTo(map_5793fbafcc58e7b07173dbdd6d2dc8e5);
+            tile_layer_82c33e992016a6bd8b0c904e64d88c37.addTo(map_dab810638aaf6a1e6eb51bab01734318);
         
     
-            var feature_group_09e8063db4f134e47ef19ccc7a87a7be = L.featureGroup(
+            var feature_group_d6f70e9054579ab93ce1eaa1a6e11b6f = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_f755a93dafc9a24fa1678ba00ea1e20e = L.marker(
+            var marker_c2eebf402d65cd5354ea8db8d21e2126 = L.marker(
                 [24.9552813169782, 121.414357743916],
                 {
 }
-            ).addTo(feature_group_09e8063db4f134e47ef19ccc7a87a7be);
+            ).addTo(feature_group_d6f70e9054579ab93ce1eaa1a6e11b6f);
         
     
-            var icon_8876a0d2310b88c26f149b51db8ee008 = L.AwesomeMarkers.icon(
+            var icon_5df4d8853add3fe1e7cbcd4facffcdc0 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -171,24 +174,24 @@ async function sendFeedback(pid){
             );
         
     
-        var popup_d88b888f59e8dc19511b4e65b83b8f89 = L.popup({
+        var popup_c8ffc6f7bd6cbee4c3ca2af1bbe7df5e = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_72b9c96cc83b6734c550194b5e68f501 = $(`<div id="html_72b9c96cc83b6734c550194b5e68f501" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial, 'Microsoft JhengHei', sans-serif; font-size: 13px; width: 360px;">       <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">土城產業園區｜資訊</div>       <table style="border-collapse: collapse; width: 100%;">         <tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>工業區名稱</th><td style='padding:4px 8px;border:1px solid #ddd;'>土城產業園區</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>監測期間</th><td style='padding:4px 8px;border:1px solid #ddd;'>115.09</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>資料類型</th><td style='padding:4px 8px;border:1px solid #ddd;'>現址式GC</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>備註</th><td style='padding:4px 8px;border:1px solid #ddd;'>原始資料</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>原始資料</th><td style='padding:4px 8px;border:1px solid #ddd;'>     <a href="./data/土城產業園區_量測資料.html" target="_blank"        style="display:inline-block;padding:6px 10px;border:1px solid #1f77b4;border-radius:6px;               text-decoration:none;color:#1f77b4;font-weight:700;">        查看原始量測資料     </a>     </td></tr>       </table>        <!-- 回饋 -->            <div style="margin-top:10px;">       <div style="font-weight:700;margin-bottom:6px;">回饋</div>       <textarea id="fb_土城產業園區" rows="3"         placeholder="在這裡輸入回饋（會自動帶入時間、工業區、經緯度）"         style="width:100%;box-sizing:border-box;padding:6px 8px;border:1px solid #ccc;border-radius:6px;"></textarea>       <div style="display:flex;gap:8px;align-items:center;margin-top:6px;">         <button type="button"           style="padding:6px 10px;border:1px solid #1f77b4;background:white;color:#1f77b4;border-radius:6px;font-weight:700;cursor:pointer;"           onclick="sendFeedback('土城產業園區')">           送出回饋         </button>         <span id="msg_土城產業園區" style="font-size:12px;color:green;"></span>       </div>       <div style="font-size:12px;color:#666;margin-top:6px;">         註：此版本先做互動與資料封包（console 可看到 payload），下一步再串接 Google 接收。       </div>     </div>             <!-- 隱藏資料：給 JS 取用 -->       <div id="meta_土城產業園區" data-park="土城產業園區" data-lat="24.9552813169782" data-lon="121.414357743916" style="display:none;"></div>     </div>     </div>`)[0];
-                popup_d88b888f59e8dc19511b4e65b83b8f89.setContent(html_72b9c96cc83b6734c550194b5e68f501);
+                var html_8d8bf0f7f95f26cf9ae483cb9892af61 = $(`<div id="html_8d8bf0f7f95f26cf9ae483cb9892af61" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial, 'Microsoft JhengHei', sans-serif; font-size: 13px; width: 360px;">       <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">土城產業園區｜資訊</div>       <table style="border-collapse: collapse; width: 100%;">         <tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>工業區名稱</th><td style='padding:4px 8px;border:1px solid #ddd;'>土城產業園區</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>監測期間</th><td style='padding:4px 8px;border:1px solid #ddd;'>115.09</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>資料類型</th><td style='padding:4px 8px;border:1px solid #ddd;'>現址式GC</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>備註</th><td style='padding:4px 8px;border:1px solid #ddd;'>原始資料</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>原始資料</th><td style='padding:4px 8px;border:1px solid #ddd;'>     <a href="./data/土城產業園區_量測資料.html" target="_blank"        style="display:inline-block;padding:6px 10px;border:1px solid #1f77b4;border-radius:6px;               text-decoration:none;color:#1f77b4;font-weight:700;">        查看原始量測資料     </a>     </td></tr>       </table>        <!-- 回饋 -->            <div style="margin-top:10px;">       <div style="font-weight:700;margin-bottom:6px;">回饋</div>       <textarea id="fb_土城產業園區" rows="3"         placeholder="在這裡輸入回饋（會自動帶入時間、工業區、經緯度）"         style="width:100%;box-sizing:border-box;padding:6px 8px;border:1px solid #ccc;border-radius:6px;"></textarea>       <div style="display:flex;gap:8px;align-items:center;margin-top:6px;">         <button type="button"           style="padding:6px 10px;border:1px solid #1f77b4;background:white;color:#1f77b4;border-radius:6px;font-weight:700;cursor:pointer;"           onclick="sendFeedback('土城產業園區')">           送出回饋         </button>         <span id="msg_土城產業園區" style="font-size:12px;color:green;"></span>       </div>       <div style="font-size:12px;color:#666;margin-top:6px;">         註：此版本先做互動與資料封包（console 可看到 payload），下一步再串接 Google 接收。       </div>     </div>             <!-- 隱藏資料：給 JS 取用 -->       <div id="meta_土城產業園區" data-park="土城產業園區" data-lat="24.9552813169782" data-lon="121.414357743916" style="display:none;"></div>     </div>     </div>`)[0];
+                popup_c8ffc6f7bd6cbee4c3ca2af1bbe7df5e.setContent(html_8d8bf0f7f95f26cf9ae483cb9892af61);
             
         
 
-        marker_f755a93dafc9a24fa1678ba00ea1e20e.bindPopup(popup_d88b888f59e8dc19511b4e65b83b8f89)
+        marker_c2eebf402d65cd5354ea8db8d21e2126.bindPopup(popup_c8ffc6f7bd6cbee4c3ca2af1bbe7df5e)
         ;
 
         
     
     
-            marker_f755a93dafc9a24fa1678ba00ea1e20e.bindTooltip(
+            marker_c2eebf402d65cd5354ea8db8d21e2126.bindTooltip(
                 `<div>
                      土城產業園區
                  </div>`,
@@ -198,17 +201,17 @@ async function sendFeedback(pid){
             );
         
     
-                marker_f755a93dafc9a24fa1678ba00ea1e20e.setIcon(icon_8876a0d2310b88c26f149b51db8ee008);
+                marker_c2eebf402d65cd5354ea8db8d21e2126.setIcon(icon_5df4d8853add3fe1e7cbcd4facffcdc0);
             
     
-            var marker_321848e2c9411e11cc51cc25086ee6d1 = L.marker(
+            var marker_39990a68e0f83acd438d3471a446253d = L.marker(
                 [24.8735246491135, 121.017406621259],
                 {
 }
-            ).addTo(feature_group_09e8063db4f134e47ef19ccc7a87a7be);
+            ).addTo(feature_group_d6f70e9054579ab93ce1eaa1a6e11b6f);
         
     
-            var icon_18b3d2339a72a7ce917e782bc7cba1bf = L.AwesomeMarkers.icon(
+            var icon_b7a0733a9c6332c85e2848948c7bc1af = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -219,24 +222,24 @@ async function sendFeedback(pid){
             );
         
     
-        var popup_1c1af41b1554ef704b01e1e76ef687f3 = L.popup({
+        var popup_ab54cb865538e732f74ad2446020ef85 = L.popup({
   "maxWidth": 460,
 });
 
         
             
-                var html_64a9dedb716081164942f0f5a8269bf9 = $(`<div id="html_64a9dedb716081164942f0f5a8269bf9" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial, 'Microsoft JhengHei', sans-serif; font-size: 13px; width: 360px;">       <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">新竹產業園區｜資訊</div>       <table style="border-collapse: collapse; width: 100%;">         <tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>工業區名稱</th><td style='padding:4px 8px;border:1px solid #ddd;'>新竹產業園區</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>監測期間</th><td style='padding:4px 8px;border:1px solid #ddd;'>115.06</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>資料類型</th><td style='padding:4px 8px;border:1px solid #ddd;'>現址式GC</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>備註</th><td style='padding:4px 8px;border:1px solid #ddd;'>原始資料</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>原始資料</th><td style='padding:4px 8px;border:1px solid #ddd;'>     <a href="./data/新竹產業園區_量測資料.html" target="_blank"        style="display:inline-block;padding:6px 10px;border:1px solid #1f77b4;border-radius:6px;               text-decoration:none;color:#1f77b4;font-weight:700;">        查看原始量測資料     </a>     </td></tr>       </table>        <!-- 回饋 -->            <div style="margin-top:10px;">       <div style="font-weight:700;margin-bottom:6px;">回饋</div>       <textarea id="fb_新竹產業園區" rows="3"         placeholder="在這裡輸入回饋（會自動帶入時間、工業區、經緯度）"         style="width:100%;box-sizing:border-box;padding:6px 8px;border:1px solid #ccc;border-radius:6px;"></textarea>       <div style="display:flex;gap:8px;align-items:center;margin-top:6px;">         <button type="button"           style="padding:6px 10px;border:1px solid #1f77b4;background:white;color:#1f77b4;border-radius:6px;font-weight:700;cursor:pointer;"           onclick="sendFeedback('新竹產業園區')">           送出回饋         </button>         <span id="msg_新竹產業園區" style="font-size:12px;color:green;"></span>       </div>       <div style="font-size:12px;color:#666;margin-top:6px;">         註：此版本先做互動與資料封包（console 可看到 payload），下一步再串接 Google 接收。       </div>     </div>             <!-- 隱藏資料：給 JS 取用 -->       <div id="meta_新竹產業園區" data-park="新竹產業園區" data-lat="24.8735246491135" data-lon="121.017406621259" style="display:none;"></div>     </div>     </div>`)[0];
-                popup_1c1af41b1554ef704b01e1e76ef687f3.setContent(html_64a9dedb716081164942f0f5a8269bf9);
+                var html_ac87053c54e0cb6353d5224e434352dd = $(`<div id="html_ac87053c54e0cb6353d5224e434352dd" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial, 'Microsoft JhengHei', sans-serif; font-size: 13px; width: 360px;">       <div style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">新竹產業園區｜資訊</div>       <table style="border-collapse: collapse; width: 100%;">         <tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>工業區名稱</th><td style='padding:4px 8px;border:1px solid #ddd;'>新竹產業園區</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>監測期間</th><td style='padding:4px 8px;border:1px solid #ddd;'>115.06</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>資料類型</th><td style='padding:4px 8px;border:1px solid #ddd;'>現址式GC</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>備註</th><td style='padding:4px 8px;border:1px solid #ddd;'>原始資料</td></tr><tr><th style='text-align:left;padding:4px 8px;background:#f6f6f6;border:1px solid #ddd;vertical-align:top;width:92px;'>原始資料</th><td style='padding:4px 8px;border:1px solid #ddd;'>     <a href="./data/新竹產業園區_量測資料.html" target="_blank"        style="display:inline-block;padding:6px 10px;border:1px solid #1f77b4;border-radius:6px;               text-decoration:none;color:#1f77b4;font-weight:700;">        查看原始量測資料     </a>     </td></tr>       </table>        <!-- 回饋 -->            <div style="margin-top:10px;">       <div style="font-weight:700;margin-bottom:6px;">回饋</div>       <textarea id="fb_新竹產業園區" rows="3"         placeholder="在這裡輸入回饋（會自動帶入時間、工業區、經緯度）"         style="width:100%;box-sizing:border-box;padding:6px 8px;border:1px solid #ccc;border-radius:6px;"></textarea>       <div style="display:flex;gap:8px;align-items:center;margin-top:6px;">         <button type="button"           style="padding:6px 10px;border:1px solid #1f77b4;background:white;color:#1f77b4;border-radius:6px;font-weight:700;cursor:pointer;"           onclick="sendFeedback('新竹產業園區')">           送出回饋         </button>         <span id="msg_新竹產業園區" style="font-size:12px;color:green;"></span>       </div>       <div style="font-size:12px;color:#666;margin-top:6px;">         註：此版本先做互動與資料封包（console 可看到 payload），下一步再串接 Google 接收。       </div>     </div>             <!-- 隱藏資料：給 JS 取用 -->       <div id="meta_新竹產業園區" data-park="新竹產業園區" data-lat="24.8735246491135" data-lon="121.017406621259" style="display:none;"></div>     </div>     </div>`)[0];
+                popup_ab54cb865538e732f74ad2446020ef85.setContent(html_ac87053c54e0cb6353d5224e434352dd);
             
         
 
-        marker_321848e2c9411e11cc51cc25086ee6d1.bindPopup(popup_1c1af41b1554ef704b01e1e76ef687f3)
+        marker_39990a68e0f83acd438d3471a446253d.bindPopup(popup_ab54cb865538e732f74ad2446020ef85)
         ;
 
         
     
     
-            marker_321848e2c9411e11cc51cc25086ee6d1.bindTooltip(
+            marker_39990a68e0f83acd438d3471a446253d.bindTooltip(
                 `<div>
                      新竹產業園區
                  </div>`,
@@ -246,29 +249,29 @@ async function sendFeedback(pid){
             );
         
     
-                marker_321848e2c9411e11cc51cc25086ee6d1.setIcon(icon_18b3d2339a72a7ce917e782bc7cba1bf);
+                marker_39990a68e0f83acd438d3471a446253d.setIcon(icon_b7a0733a9c6332c85e2848948c7bc1af);
             
     
-            feature_group_09e8063db4f134e47ef19ccc7a87a7be.addTo(map_5793fbafcc58e7b07173dbdd6d2dc8e5);
+            feature_group_d6f70e9054579ab93ce1eaa1a6e11b6f.addTo(map_dab810638aaf6a1e6eb51bab01734318);
         
     
-            var layer_control_9b699f4901232b2fc3463608410084ff_layers = {
+            var layer_control_0e84d78f8a46253a9e99ed78d8a2c367_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_7fcc56e9d36338a704720259c78bb19e,
+                    "openstreetmap" : tile_layer_82c33e992016a6bd8b0c904e64d88c37,
                 },
                 overlays :  {
-                    "\u7522\u696d\u5712\u5340\uff08\u4e2d\u5fc3\u9ede\uff09" : feature_group_09e8063db4f134e47ef19ccc7a87a7be,
+                    "\u7522\u696d\u5712\u5340\uff08\u4e2d\u5fc3\u9ede\uff09" : feature_group_d6f70e9054579ab93ce1eaa1a6e11b6f,
                 },
             };
-            let layer_control_9b699f4901232b2fc3463608410084ff = L.control.layers(
-                layer_control_9b699f4901232b2fc3463608410084ff_layers.base_layers,
-                layer_control_9b699f4901232b2fc3463608410084ff_layers.overlays,
+            let layer_control_0e84d78f8a46253a9e99ed78d8a2c367 = L.control.layers(
+                layer_control_0e84d78f8a46253a9e99ed78d8a2c367_layers.base_layers,
+                layer_control_0e84d78f8a46253a9e99ed78d8a2c367_layers.overlays,
                 {
   "position": "topright",
   "collapsed": false,
   "autoZIndex": true,
 }
-            ).addTo(map_5793fbafcc58e7b07173dbdd6d2dc8e5);
+            ).addTo(map_dab810638aaf6a1e6eb51bab01734318);
 
         
 </script>
