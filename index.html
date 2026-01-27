@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a09eca60261dce68ca51f508a2506b72 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a09eca60261dce68ca51f508a2506b72" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a09eca60261dce68ca51f508a2506b72 = L.map(
+                "map_a09eca60261dce68ca51f508a2506b72",
+                {
+                    center: [24.91440298304585, 121.2158821825875],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_a09eca60261dce68ca51f508a2506b72);
+
+            
+
+        
+    
+            var tile_layer_dad131dad3076fc01eda29e5f89205de = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_dad131dad3076fc01eda29e5f89205de.addTo(map_a09eca60261dce68ca51f508a2506b72);
+        
+    
+            var feature_group_ffb8d8e54533b0ac3faef2ff52991d70 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d4c96cb90d4283a65877ba952b970c31 = L.marker(
+                [24.9552813169782, 121.414357743916],
+                {
+}
+            ).addTo(feature_group_ffb8d8e54533b0ac3faef2ff52991d70);
+        
+    
+            var icon_3e586ade174f062793d8d29d4d59d598 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac5885d48c5c9643349ef8c40ea51f42 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var i_frame_c100b61ac1fa206c51450f487c180052 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OkFyaWFsLCAnTWljcm9zb2Z0IEpoZW5nSGVpJywgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxM3B4OyB3aWR0aDogMzQwcHg7Ij4KICAgICAgPGRpdiBzdHlsZT0iZm9udC1zaXplOiAxNXB4OyBmb250LXdlaWdodDogNzAwOyBtYXJnaW4tYm90dG9tOiA2cHg7Ij7lnJ/ln47nlKLmpa3lnJLljYDvvZzos4foqIo8L2Rpdj4KICAgICAgPHRhYmxlIHN0eWxlPSJib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlOyB3aWR0aDogMTAwJTsiPgogICAgICAgIDx0cj48dGggc3R5bGU9J3RleHQtYWxpZ246bGVmdDtwYWRkaW5nOjRweCA4cHg7YmFja2dyb3VuZDojZjZmNmY2O2JvcmRlcjoxcHggc29saWQgI2RkZDt2ZXJ0aWNhbC1hbGlnbjp0b3A7Jz7lt6Xmpa3ljYDlkI3nqLE8L3RoPjx0ZCBzdHlsZT0ncGFkZGluZzo0cHggOHB4O2JvcmRlcjoxcHggc29saWQgI2RkZDsnPuWcn+WfjueUoualreWckuWNgDwvdGQ+PC90cj48dHI+PHRoIHN0eWxlPSd0ZXh0LWFsaWduOmxlZnQ7cGFkZGluZzo0cHggOHB4O2JhY2tncm91bmQ6I2Y2ZjZmNjtib3JkZXI6MXB4IHNvbGlkICNkZGQ7dmVydGljYWwtYWxpZ246dG9wOyc+55uj5ris5pyf6ZaTPC90aD48dGQgc3R5bGU9J3BhZGRpbmc6NHB4IDhweDtib3JkZXI6MXB4IHNvbGlkICNkZGQ7Jz4xMTUuMDk8L3RkPjwvdHI+PHRyPjx0aCBzdHlsZT0ndGV4dC1hbGlnbjpsZWZ0O3BhZGRpbmc6NHB4IDhweDtiYWNrZ3JvdW5kOiNmNmY2ZjY7Ym9yZGVyOjFweCBzb2xpZCAjZGRkO3ZlcnRpY2FsLWFsaWduOnRvcDsnPuizh+aWmemhnuWeizwvdGg+PHRkIHN0eWxlPSdwYWRkaW5nOjRweCA4cHg7Ym9yZGVyOjFweCBzb2xpZCAjZGRkOyc+54++5Z2A5byPR0M8L3RkPjwvdHI+PHRyPjx0aCBzdHlsZT0ndGV4dC1hbGlnbjpsZWZ0O3BhZGRpbmc6NHB4IDhweDtiYWNrZ3JvdW5kOiNmNmY2ZjY7Ym9yZGVyOjFweCBzb2xpZCAjZGRkO3ZlcnRpY2FsLWFsaWduOnRvcDsnPuWCmeiouzwvdGg+PHRkIHN0eWxlPSdwYWRkaW5nOjRweCA4cHg7Ym9yZGVyOjFweCBzb2xpZCAjZGRkOyc+5Y6f5aeL6LOH5paZPC90ZD48L3RyPjx0cj48dGggc3R5bGU9J3RleHQtYWxpZ246bGVmdDtwYWRkaW5nOjRweCA4cHg7YmFja2dyb3VuZDojZjZmNmY2O2JvcmRlcjoxcHggc29saWQgI2RkZDt2ZXJ0aWNhbC1hbGlnbjp0b3A7Jz7ljp/lp4vos4fmlpk8L3RoPjx0ZCBzdHlsZT0ncGFkZGluZzo0cHggOHB4O2JvcmRlcjoxcHggc29saWQgI2RkZDsnPgogICAgPGEgaHJlZj0iZGF0YS/lnJ/ln47nlKLmpa3lnJLljYBf6YeP5ris6LOH5paZLmh0bWwiIHRhcmdldD0iX2JsYW5rIgogICAgICAgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6NnB4IDEwcHg7Ym9yZGVyOjFweCBzb2xpZCAjMWY3N2I0O2JvcmRlci1yYWRpdXM6NnB4OwogICAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjpub25lO2NvbG9yOiMxZjc3YjQ7Zm9udC13ZWlnaHQ6NzAwOyI+CiAgICAgICDmn6XnnIvljp/lp4vph4/muKzos4fmlpkKICAgIDwvYT4KICAgIDwvdGQ+PC90cj4KICAgICAgPC90YWJsZT4KICAgICAgPGRpdiBzdHlsZT0ibWFyZ2luLXRvcDo4cHg7IGZvbnQtc2l6ZToxMnB4OyBjb2xvcjojNjY2OyI+CiAgICAgICAg5o+Q56S677ya5Y6f5aeL6LOH5paZ6aCB6Z2i5piv55SxIEV4Y2VsIOeahOOAjOmHj+a4rOizh+aWmeOAjeW3peS9nOihqOi8uOWHuuaIkCBIVE1M44CCCiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA=" width="380" style="border:none !important;" height="260"></iframe>`)[0];
+                popup_ac5885d48c5c9643349ef8c40ea51f42.setContent(i_frame_c100b61ac1fa206c51450f487c180052);
+            
+        
+
+        marker_d4c96cb90d4283a65877ba952b970c31.bindPopup(popup_ac5885d48c5c9643349ef8c40ea51f42)
+        ;
+
+        
+    
+    
+            marker_d4c96cb90d4283a65877ba952b970c31.bindTooltip(
+                `<div>
+                     土城產業園區
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4c96cb90d4283a65877ba952b970c31.setIcon(icon_3e586ade174f062793d8d29d4d59d598);
+            
+    
+            var marker_992db257022b80997bd3a362e0a54dcb = L.marker(
+                [24.8735246491135, 121.017406621259],
+                {
+}
+            ).addTo(feature_group_ffb8d8e54533b0ac3faef2ff52991d70);
+        
+    
+            var icon_e50ff1e1bd7f21152f469ed63080a901 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ec5ff43b343d74f65e459c645c1a7e6 = L.popup({
+  "maxWidth": 420,
+});
+
+        
+            
+                var i_frame_fe9b246ed609b4fe8f028ea401378208 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9ImZvbnQtZmFtaWx5OkFyaWFsLCAnTWljcm9zb2Z0IEpoZW5nSGVpJywgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxM3B4OyB3aWR0aDogMzQwcHg7Ij4KICAgICAgPGRpdiBzdHlsZT0iZm9udC1zaXplOiAxNXB4OyBmb250LXdlaWdodDogNzAwOyBtYXJnaW4tYm90dG9tOiA2cHg7Ij7mlrDnq7nnlKLmpa3lnJLljYDvvZzos4foqIo8L2Rpdj4KICAgICAgPHRhYmxlIHN0eWxlPSJib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlOyB3aWR0aDogMTAwJTsiPgogICAgICAgIDx0cj48dGggc3R5bGU9J3RleHQtYWxpZ246bGVmdDtwYWRkaW5nOjRweCA4cHg7YmFja2dyb3VuZDojZjZmNmY2O2JvcmRlcjoxcHggc29saWQgI2RkZDt2ZXJ0aWNhbC1hbGlnbjp0b3A7Jz7lt6Xmpa3ljYDlkI3nqLE8L3RoPjx0ZCBzdHlsZT0ncGFkZGluZzo0cHggOHB4O2JvcmRlcjoxcHggc29saWQgI2RkZDsnPuaWsOerueeUoualreWckuWNgDwvdGQ+PC90cj48dHI+PHRoIHN0eWxlPSd0ZXh0LWFsaWduOmxlZnQ7cGFkZGluZzo0cHggOHB4O2JhY2tncm91bmQ6I2Y2ZjZmNjtib3JkZXI6MXB4IHNvbGlkICNkZGQ7dmVydGljYWwtYWxpZ246dG9wOyc+55uj5ris5pyf6ZaTPC90aD48dGQgc3R5bGU9J3BhZGRpbmc6NHB4IDhweDtib3JkZXI6MXB4IHNvbGlkICNkZGQ7Jz4xMTUuMDY8L3RkPjwvdHI+PHRyPjx0aCBzdHlsZT0ndGV4dC1hbGlnbjpsZWZ0O3BhZGRpbmc6NHB4IDhweDtiYWNrZ3JvdW5kOiNmNmY2ZjY7Ym9yZGVyOjFweCBzb2xpZCAjZGRkO3ZlcnRpY2FsLWFsaWduOnRvcDsnPuizh+aWmemhnuWeizwvdGg+PHRkIHN0eWxlPSdwYWRkaW5nOjRweCA4cHg7Ym9yZGVyOjFweCBzb2xpZCAjZGRkOyc+54++5Z2A5byPR0M8L3RkPjwvdHI+PHRyPjx0aCBzdHlsZT0ndGV4dC1hbGlnbjpsZWZ0O3BhZGRpbmc6NHB4IDhweDtiYWNrZ3JvdW5kOiNmNmY2ZjY7Ym9yZGVyOjFweCBzb2xpZCAjZGRkO3ZlcnRpY2FsLWFsaWduOnRvcDsnPuWCmeiouzwvdGg+PHRkIHN0eWxlPSdwYWRkaW5nOjRweCA4cHg7Ym9yZGVyOjFweCBzb2xpZCAjZGRkOyc+5Y6f5aeL6LOH5paZPC90ZD48L3RyPjx0cj48dGggc3R5bGU9J3RleHQtYWxpZ246bGVmdDtwYWRkaW5nOjRweCA4cHg7YmFja2dyb3VuZDojZjZmNmY2O2JvcmRlcjoxcHggc29saWQgI2RkZDt2ZXJ0aWNhbC1hbGlnbjp0b3A7Jz7ljp/lp4vos4fmlpk8L3RoPjx0ZCBzdHlsZT0ncGFkZGluZzo0cHggOHB4O2JvcmRlcjoxcHggc29saWQgI2RkZDsnPgogICAgPGEgaHJlZj0iZGF0YS/mlrDnq7nnlKLmpa3lnJLljYBf6YeP5ris6LOH5paZLmh0bWwiIHRhcmdldD0iX2JsYW5rIgogICAgICAgc3R5bGU9ImRpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6NnB4IDEwcHg7Ym9yZGVyOjFweCBzb2xpZCAjMWY3N2I0O2JvcmRlci1yYWRpdXM6NnB4OwogICAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjpub25lO2NvbG9yOiMxZjc3YjQ7Zm9udC13ZWlnaHQ6NzAwOyI+CiAgICAgICDmn6XnnIvljp/lp4vph4/muKzos4fmlpkKICAgIDwvYT4KICAgIDwvdGQ+PC90cj4KICAgICAgPC90YWJsZT4KICAgICAgPGRpdiBzdHlsZT0ibWFyZ2luLXRvcDo4cHg7IGZvbnQtc2l6ZToxMnB4OyBjb2xvcjojNjY2OyI+CiAgICAgICAg5o+Q56S677ya5Y6f5aeL6LOH5paZ6aCB6Z2i5piv55SxIEV4Y2VsIOeahOOAjOmHj+a4rOizh+aWmeOAjeW3peS9nOihqOi8uOWHuuaIkCBIVE1M44CCCiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICA=" width="380" style="border:none !important;" height="260"></iframe>`)[0];
+                popup_8ec5ff43b343d74f65e459c645c1a7e6.setContent(i_frame_fe9b246ed609b4fe8f028ea401378208);
+            
+        
+
+        marker_992db257022b80997bd3a362e0a54dcb.bindPopup(popup_8ec5ff43b343d74f65e459c645c1a7e6)
+        ;
+
+        
+    
+    
+            marker_992db257022b80997bd3a362e0a54dcb.bindTooltip(
+                `<div>
+                     新竹產業園區
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_992db257022b80997bd3a362e0a54dcb.setIcon(icon_e50ff1e1bd7f21152f469ed63080a901);
+            
+    
+            feature_group_ffb8d8e54533b0ac3faef2ff52991d70.addTo(map_a09eca60261dce68ca51f508a2506b72);
+        
+    
+            var layer_control_5bfe4ea1cffa4c17d3e0631a8d3cddaa_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_dad131dad3076fc01eda29e5f89205de,
+                },
+                overlays :  {
+                    "\u7522\u696d\u5712\u5340\uff08\u4e2d\u5fc3\u9ede\uff09" : feature_group_ffb8d8e54533b0ac3faef2ff52991d70,
+                },
+            };
+            let layer_control_5bfe4ea1cffa4c17d3e0631a8d3cddaa = L.control.layers(
+                layer_control_5bfe4ea1cffa4c17d3e0631a8d3cddaa_layers.base_layers,
+                layer_control_5bfe4ea1cffa4c17d3e0631a8d3cddaa_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_a09eca60261dce68ca51f508a2506b72);
+
+        
+</script>
+</html>
