@@ -1,0 +1,48 @@
+name: Auto Build Map
+
+# 設定觸發條件：當 main 分支有 push，且變動包含 xlsx 或 py 檔案時觸發
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.xlsx'   # 當你上傳新 Excel 時
+      - '**.py'     # 當你修改程式碼時
+      - 'requirements.txt'
+
+permissions:
+  contents: write   # 允許機器人修改網頁檔案
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 下載你的專案 (Checkout)
+        uses: actions/checkout@v3
+
+      - name: 設定 Python 環境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: 安裝套件
+        run: |
+          pip install -r requirements.txt
+
+      - name: 執行製圖程式
+        run: |
+          python build_map.py
+          # 注意：這裡的 build_map.py 要換成你上面存的檔名
+
+      - name: 發布到 GitHub Pages (或更新 index.html)
+        run: |
+          git config --global user.name "Map Bot"
+          git config --global user.email "bot@github.com"
+          
+          # 強制加入生成的檔案 (避免被 .gitignore 忽略)
+          git add index.html data/*.html
+          
+          # 提交變更
+          git commit -m "Auto-update map: $(date +'%Y-%m-%d %H:%M')" || echo "無變更"
+          git push
