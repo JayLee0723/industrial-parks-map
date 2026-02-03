@@ -32,7 +32,7 @@ jobs:
 
       - name: 執行製圖程式
         run: |
-          python build_map.py
+          python test互動式網頁5.py
           # 注意：這裡的 build_map.py 要換成你上面存的檔名
 
       - name: 發布到 GitHub Pages (或更新 index.html)
