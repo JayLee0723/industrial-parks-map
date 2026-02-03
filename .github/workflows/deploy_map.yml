@@ -34,7 +34,7 @@ jobs:
       - name: 執行製圖程式
         run: |
           # 這裡要確認你的 python 檔名是否正確，如果不一樣請手動修改
-          python test互動式網頁5.py
+          python build_map.py
 
       - name: 發布與同步 (Deploy)
         run: |
