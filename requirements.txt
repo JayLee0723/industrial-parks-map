@@ -1,0 +1,8 @@
+pandas
+folium
+geopandas
+fiona
+shapely
+openpyxl
+xlrd
+jinja2
