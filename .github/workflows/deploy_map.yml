@@ -20,7 +20,7 @@ jobs:
       - name: 下載專案 (Checkout)
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # 抓取完整歷史，有助於解決衝突
+          fetch-depth: 0  # 抓取完整歷史，這很重要
 
       - name: 設定 Python 環境
         uses: actions/setup-python@v4
@@ -33,26 +33,31 @@ jobs:
 
       - name: 執行製圖程式
         run: |
+          # 這裡要確認你的 python 檔名是否正確，如果不一樣請手動修改
           python test互動式網頁5.py
-          # 請確認這裡的檔名跟你的 Python 檔名完全一致
 
-      - name: 發布到 GitHub Pages
+      - name: 發布與同步 (Deploy)
         run: |
           git config --global user.name "Map Bot"
           git config --global user.email "bot@github.com"
           
-          # 加入所有變更
+          # 1. 加入所有變更
           git add .
           
-          # 檢查是否有變更
-          if git diff --staged --quiet; then
-            echo "⚠️ 偵測到沒有檔案變更，跳過上傳步驟。"
-          else
-            echo "✅ 偵測到變更，準備上傳..."
-            git commit -m "Auto-update map: $(date +'%Y-%m-%d %H:%M')"
-            
-            # 🔥 關鍵修復：上傳前先與遠端同步，解決衝突
-            git pull --rebase origin main
-            
-            git push origin main
+          # 2. 檢查有沒有東西需要上傳？(避免紅燈關鍵)
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "🟢 偵測到沒有檔案變更，自動結束工作。"
+            exit 0
           fi
+
+          # 3. 如果有變更，才執行提交
+          echo "🟡 偵測到變更，準備提交..."
+          git commit -m "Auto-update map by Bot"
+
+          # 4. 🔥 關鍵：上傳前先跟雲端同步 (解決你現在的報錯)
+          echo "🔄 正在與雲端同步..."
+          git pull --rebase origin main
+          
+          # 5. 推送
+          echo "🚀 推送更新..."
+          git push origin main
